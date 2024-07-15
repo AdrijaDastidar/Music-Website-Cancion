@@ -1,0 +1,127 @@
+@import url("https://fonts.googleapis.com/css2?family=Satisfy&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Allerta Stencil");
+
+body {
+    font-family: 'allerta stencil';
+    font-size: 16px;
+    color: #00bfff;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    background-image: url('image/pic.png');
+    background-size: cover;
+    background-position: center;
+}
+
+/* Header styles */
+header {
+    position: fixed;
+    backdrop-filter: blur(8px);
+    background: rgba(0, 0, 0, 0.4);
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 99;
+}
+
+/* Logo styles */
+.logo {
+    color: #fde02f;
+    font-family: Satisfy;
+    font-size: 50px;
+    font-weight: bold;
+    user-select: none;
+    font-weight: 800;
+    margin: 10px;
+}
+
+/* Navigation links styles */
+.navigation a {
+    position: relative;
+    font-size: 20px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+    margin-right: 50px;
+}
+
+.navigation a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    width: 100%;
+    height: 3px;
+    background: #fff;
+    border-radius: 5px;
+    transform: scaleX(0);
+    transition: transform 0.5s;
+}
+
+.navigation a:hover::after {
+    transform: scaleX(1);
+}
+
+#container {
+    width: 100%;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    backdrop-filter: blur(10px);
+    border: 2px solid rgba(255, 255, 255, 0.5);
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
+}
+
+#upload-song-interface {
+    text-align: center;
+    width: 100%;
+    max-width: 500px;
+    padding: 20px;
+    margin: 100px auto 0 auto;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
+}
+
+#upload-song-interface h2 {
+    color: #000; 
+    font-size: 24px; 
+    text-align: center;
+}
+
+#upload-song-interface label,
+#upload-song-interface input[type="file"],
+#upload-song-interface input[type="text"],
+#upload-song-interface select {
+    color: #000; 
+    background-color: #fff; 
+    border: 2px solid #ffffff96; 
+    border-radius: 5px; 
+    padding: 8px; 
+    margin-bottom: 10px; 
+}
+
+#upload-song-interface input[type="submit"] {
+    background-color: rgb(1, 159, 1); 
+    color: #fff; 
+    border: none; 
+    border-radius: 5px; 
+    padding: 10px 20px; 
+    cursor: pointer; 
+    transition: background-color 0.3s ease; 
+}
+
+#upload-song-interface input[type="submit"]:hover {
+    background-color: #0cd20c; 
+}
+
+@media (min-width: 768px) {
+    #upload-song-interface {
+        max-width: 550px;
+    }
+}
